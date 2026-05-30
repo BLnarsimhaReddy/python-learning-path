@@ -1,0 +1,650 @@
+# Lesson 6: Functions
+
+## 🎯 Learning Objectives
+
+By the end of this lesson, you will be able to:
+
+* Understand what functions are
+* Create and call functions
+* Use parameters and arguments
+* Return values from functions
+* Use default parameters
+* Write reusable and maintainable code
+* Build practical business applications
+
+---
+
+# What is a Function?
+
+A function is a reusable block of code that performs a specific task.
+
+Without functions:
+
+```python
+salary = 100000
+bonus = salary * 0.10
+print(bonus)
+
+salary = 50000
+bonus = salary * 0.10
+print(bonus)
+
+salary = 75000
+bonus = salary * 0.10
+print(bonus)
+```
+
+Notice the repeated logic.
+
+With a function:
+
+```python
+def calculate_bonus(salary):
+    bonus = salary * 0.10
+    print(bonus)
+
+calculate_bonus(100000)
+calculate_bonus(50000)
+calculate_bonus(75000)
+```
+
+Much cleaner and easier to maintain.
+
+---
+
+# Defining a Function
+
+Syntax:
+
+```python
+def function_name():
+    # code
+```
+
+Example:
+
+```python
+def greet():
+    print("Welcome to Python")
+```
+
+---
+
+# Calling a Function
+
+Creating a function does not execute it.
+
+You must call it.
+
+```python
+def greet():
+    print("Welcome to Python")
+
+greet()
+```
+
+Output:
+
+```text
+Welcome to Python
+```
+
+---
+
+# Function with Parameters
+
+Parameters allow functions to accept data.
+
+```python
+def greet(name):
+    print("Welcome", name)
+
+greet("Reddy")
+```
+
+Output:
+
+```text
+Welcome Reddy
+```
+
+---
+
+# Multiple Parameters
+
+```python
+def employee_info(name, role):
+
+    print("Name:", name)
+    print("Role:", role)
+
+employee_info("Reddy", "Senior Software Engineer")
+```
+
+Output:
+
+```text
+Name: Reddy
+Role: Senior Software Engineer
+```
+
+---
+
+# Return Statement
+
+Functions can return values.
+
+```python
+def add(a, b):
+    return a + b
+
+result = add(10, 20)
+
+print(result)
+```
+
+Output:
+
+```text
+30
+```
+
+---
+
+# Why Return is Better than Print
+
+❌ Less flexible:
+
+```python
+def add(a, b):
+    print(a + b)
+```
+
+✅ More flexible:
+
+```python
+def add(a, b):
+    return a + b
+
+result = add(10, 20)
+
+print(result)
+```
+
+Returned values can be stored, reused, or passed to other functions.
+
+---
+
+# Example: Salary Bonus Calculator
+
+```python
+def calculate_bonus(salary):
+    return salary * 0.10
+
+bonus = calculate_bonus(100000)
+
+print("Bonus:", bonus)
+```
+
+Output:
+
+```text
+Bonus: 10000.0
+```
+
+---
+
+# Function with Multiple Returns
+
+```python
+def calculate_marks(maths, science, english):
+
+    total = maths + science + english
+    average = total / 3
+
+    return total, average
+
+total, average = calculate_marks(90, 80, 85)
+
+print(total)
+print(average)
+```
+
+Output:
+
+```text
+255
+85.0
+```
+
+---
+
+# Default Parameters
+
+Default values make parameters optional.
+
+```python
+def greet(name="Guest"):
+    print("Welcome", name)
+
+greet()
+greet("Reddy")
+```
+
+Output:
+
+```text
+Welcome Guest
+Welcome Reddy
+```
+
+---
+
+# Keyword Arguments
+
+```python
+def employee(name, role):
+    print(name, role)
+
+employee(role="Developer", name="Reddy")
+```
+
+Output:
+
+```text
+Reddy Developer
+```
+
+---
+
+# Function Scope
+
+Variables inside a function are local.
+
+```python
+def demo():
+    message = "Inside Function"
+    print(message)
+
+demo()
+```
+
+This works.
+
+But:
+
+```python
+print(message)
+```
+
+Produces an error because `message` exists only inside the function.
+
+---
+
+# Real-World Example 1: Even or Odd
+
+```python
+def is_even(number):
+
+    if number % 2 == 0:
+        return True
+
+    return False
+
+print(is_even(10))
+print(is_even(15))
+```
+
+Output:
+
+```text
+True
+False
+```
+
+---
+
+# Real-World Example 2: Loan Eligibility
+
+```python
+def loan_eligible(salary, experience):
+
+    if salary >= 50000 and experience >= 3:
+        return True
+
+    return False
+
+result = loan_eligible(60000, 5)
+
+print(result)
+```
+
+Output:
+
+```text
+True
+```
+
+---
+
+# Real-World Example 3: Grade Calculator
+
+```python
+def get_grade(marks):
+
+    if marks >= 90:
+        return "A+"
+    elif marks >= 75:
+        return "A"
+    elif marks >= 60:
+        return "B"
+    elif marks >= 35:
+        return "C"
+    else:
+        return "Fail"
+
+grade = get_grade(82)
+
+print(grade)
+```
+
+Output:
+
+```text
+A
+```
+
+---
+
+# Function Calling Another Function
+
+```python
+def calculate_bonus(salary):
+    return salary * 0.10
+
+def total_salary(salary):
+
+    bonus = calculate_bonus(salary)
+
+    return salary + bonus
+
+print(total_salary(100000))
+```
+
+Output:
+
+```text
+110000.0
+```
+
+---
+
+# Common Mistakes
+
+## Forgetting Parentheses
+
+❌
+
+```python
+greet
+```
+
+✅
+
+```python
+greet()
+```
+
+---
+
+## Missing Return
+
+❌
+
+```python
+def add(a, b):
+    result = a + b
+
+print(add(10, 20))
+```
+
+Output:
+
+```text
+None
+```
+
+✅
+
+```python
+def add(a, b):
+    return a + b
+```
+
+---
+
+# Exercise 1
+
+Create a function:
+
+```python
+def square(number):
+```
+
+Return the square of a number.
+
+Example:
+
+```python
+square(5)
+```
+
+Output:
+
+```text
+25
+```
+
+---
+
+# Exercise 2
+
+Create:
+
+```python
+def calculate_area(length, width):
+```
+
+Formula:
+
+Area = Length \times Width
+
+Return the area.
+
+---
+
+# Exercise 3
+
+Create:
+
+```python
+def check_voting_eligibility(age):
+```
+
+Return:
+
+```text
+Eligible
+```
+
+or
+
+```text
+Not Eligible
+```
+
+---
+
+# Exercise 4
+
+Create:
+
+```python
+def calculate_discount(amount):
+```
+
+Rules:
+
+* Amount ≥ 5000 → 10% discount
+* Otherwise → 5% discount
+
+Return discount amount.
+
+---
+
+# Mini Project: Employee Salary Processor
+
+```python
+def calculate_bonus(salary):
+    return salary * 0.10
+
+def calculate_total_salary(salary):
+    return salary + calculate_bonus(salary)
+
+name = input("Employee Name: ")
+salary = float(input("Salary: "))
+
+bonus = calculate_bonus(salary)
+total = calculate_total_salary(salary)
+
+print(f"\nEmployee: {name}")
+print(f"Salary: {salary}")
+print(f"Bonus: {bonus}")
+print(f"Total Salary: {total}")
+```
+
+---
+
+# Quiz
+
+### Q1
+
+Which keyword is used to define a function?
+
+A. function
+
+B. define
+
+C. def
+
+D. fun
+
+---
+
+### Q2
+
+What does a function return if there is no `return` statement?
+
+A. 0
+
+B. False
+
+C. None
+
+D. Error
+
+---
+
+### Q3
+
+Output?
+
+```python
+def add(a, b):
+    return a + b
+
+print(add(5, 10))
+```
+
+A. 5
+
+B. 10
+
+C. 15
+
+D. Error
+
+---
+
+### Q4
+
+What is a parameter?
+
+A. Returned value
+
+B. Variable received by a function
+
+C. Loop variable
+
+D. Data type
+
+---
+
+# Assignment
+
+Create:
+
+```text
+employee_tax_calculator.py
+```
+
+Requirements:
+
+Create functions:
+
+```python
+calculate_tax(salary)
+calculate_net_salary(salary)
+```
+
+Rules:
+
+* Salary ≥ 100000 → Tax = 20%
+* Salary ≥ 50000 → Tax = 10%
+* Otherwise → Tax = 5%
+
+Display:
+
+```text
+Employee Salary Report
+----------------------
+Salary      : 120000
+Tax         : 24000
+Net Salary  : 96000
+```
+
+---
+
+# Answers
+
+* Q1 → C (`def`)
+* Q2 → C (`None`)
+* Q3 → C (`15`)
+* Q4 → B (Variable received by a function)
+
+---
+
+## Next Lesson 🚀
+
+**Lesson 7: Lists and Tuples**
+
+You will learn:
+
+* Creating lists
+* Adding and removing items
+* Indexing and slicing
+* Iterating through collections
+* Tuples and immutability
+* Employee and student management examples
+
+Lists are among the most frequently used data structures in Python and are essential for real-world applications and interviews.
