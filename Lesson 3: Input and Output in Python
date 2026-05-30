@@ -1,0 +1,535 @@
+# Lesson 3: Input and Output in Python
+
+## 🎯 Learning Objectives
+
+By the end of this lesson, you will be able to:
+
+* Accept input from users
+* Display output clearly
+* Convert data types
+* Build interactive programs
+* Handle common beginner mistakes
+
+---
+
+# What is Input and Output?
+
+### Input
+
+Data entered by the user.
+
+Example:
+
+```text
+Enter your name:
+```
+
+### Output
+
+Information displayed to the user.
+
+Example:
+
+```text
+Welcome Reddy
+```
+
+---
+
+# Using print()
+
+`print()` displays information on the screen.
+
+```python
+print("Hello Python")
+```
+
+Output:
+
+```text
+Hello Python
+```
+
+---
+
+## Printing Variables
+
+```python
+name = "Reddy"
+age = 35
+
+print(name)
+print(age)
+```
+
+Output:
+
+```text
+Reddy
+35
+```
+
+---
+
+## Printing Multiple Values
+
+```python
+name = "Reddy"
+city = "Hyderabad"
+
+print(name, city)
+```
+
+Output:
+
+```text
+Reddy Hyderabad
+```
+
+---
+
+# Using input()
+
+`input()` allows users to enter data.
+
+```python
+name = input("Enter your name: ")
+
+print(name)
+```
+
+Execution:
+
+```text
+Enter your name: Reddy
+```
+
+Output:
+
+```text
+Reddy
+```
+
+---
+
+# Building a Welcome Program
+
+```python
+name = input("Enter your name: ")
+
+print("Welcome", name)
+```
+
+Example:
+
+```text
+Enter your name: Reddy
+Welcome Reddy
+```
+
+---
+
+# Important Concept
+
+Everything entered using `input()` is treated as a string.
+
+Example:
+
+```python
+age = input("Enter age: ")
+
+print(type(age))
+```
+
+Output:
+
+```text
+<class 'str'>
+```
+
+Even if user enters:
+
+```text
+35
+```
+
+Python stores it as:
+
+```python
+"35"
+```
+
+---
+
+# Type Conversion
+
+Used to convert one data type into another.
+
+## int()
+
+Convert string to integer.
+
+```python
+age = int(input("Enter age: "))
+
+print(type(age))
+```
+
+Output:
+
+```text
+<class 'int'>
+```
+
+---
+
+## float()
+
+Convert string to decimal.
+
+```python
+salary = float(input("Enter salary: "))
+
+print(type(salary))
+```
+
+---
+
+## str()
+
+Convert value to string.
+
+```python
+age = 35
+
+text = str(age)
+
+print(type(text))
+```
+
+Output:
+
+```text
+<class 'str'>
+```
+
+---
+
+# Common Beginner Mistake
+
+Consider:
+
+```python
+num1 = input("Enter first number: ")
+num2 = input("Enter second number: ")
+
+print(num1 + num2)
+```
+
+Input:
+
+```text
+10
+20
+```
+
+Output:
+
+```text
+1020
+```
+
+Why?
+
+Because Python is joining strings.
+
+---
+
+## Correct Version
+
+```python
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+print(num1 + num2)
+```
+
+Output:
+
+```text
+30
+```
+
+---
+
+# Mini Project 1: Addition Calculator
+
+```python
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+
+result = num1 + num2
+
+print("Result:", result)
+```
+
+Example:
+
+```text
+Enter first number: 25
+Enter second number: 15
+
+Result: 40.0
+```
+
+---
+
+# Mini Project 2: Employee Salary Calculator
+
+```python
+name = input("Employee Name: ")
+salary = float(input("Salary: "))
+bonus_percent = float(input("Bonus Percentage: "))
+
+bonus = salary * bonus_percent / 100
+total_salary = salary + bonus
+
+print("\nEmployee:", name)
+print("Salary:", salary)
+print("Bonus:", bonus)
+print("Total Salary:", total_salary)
+```
+
+---
+
+# Mini Project 3: Student Percentage Calculator
+
+```python
+maths = int(input("Maths Marks: "))
+science = int(input("Science Marks: "))
+english = int(input("English Marks: "))
+
+total = maths + science + english
+average = total / 3
+
+print("Total:", total)
+print("Average:", average)
+```
+
+---
+
+# Formatted Output (f-Strings)
+
+Python provides f-strings for cleaner output.
+
+```python
+name = "Reddy"
+experience = 11
+
+print(f"{name} has {experience} years of experience")
+```
+
+Output:
+
+```text
+Reddy has 11 years of experience
+```
+
+---
+
+# Real-World Example
+
+```python
+name = input("Enter Name: ")
+role = input("Enter Role: ")
+experience = int(input("Enter Experience: "))
+
+print(f"\n{name} works as a {role}")
+print(f"Experience: {experience} years")
+```
+
+---
+
+# Exercise 1
+
+Write a program to accept:
+
+```text
+Name
+Age
+City
+```
+
+Display:
+
+```text
+Name:
+Age:
+City:
+```
+
+---
+
+# Exercise 2
+
+Accept two numbers and display:
+
+```text
+Addition
+Subtraction
+Multiplication
+Division
+```
+
+---
+
+# Exercise 3
+
+Accept:
+
+```text
+Length
+Width
+```
+
+Calculate rectangle area.
+
+Formula:
+
+Area = Length \times Width
+
+---
+
+# Exercise 4
+
+Accept:
+
+```text
+Basic Salary
+Bonus Percentage
+```
+
+Calculate:
+
+```text
+Bonus Amount
+Total Salary
+```
+
+---
+
+# Quiz
+
+### Q1
+
+What is the return type of `input()`?
+
+A. int
+
+B. float
+
+C. str
+
+D. bool
+
+---
+
+### Q2
+
+Output?
+
+```python
+num = int(input("Enter Number: "))
+print(type(num))
+```
+
+User enters:
+
+```text
+50
+```
+
+A. str
+
+B. int
+
+C. float
+
+D. bool
+
+---
+
+### Q3
+
+Output?
+
+```python
+a = "10"
+b = "20"
+
+print(a + b)
+```
+
+A. 30
+
+B. 1020
+
+C. Error
+
+D. 10 20
+
+---
+
+# Assignment
+
+Create a file:
+
+```text
+employee_profile.py
+```
+
+Accept from user:
+
+* Employee Name
+* Employee ID
+* Role
+* Experience
+* Salary
+
+Display neatly using f-strings:
+
+```text
+Employee Profile
+----------------
+Name       : Reddy
+ID         : 101
+Role       : Senior Software Engineer
+Experience : 11 Years
+Salary     : 100000
+```
+
+---
+
+## Answers
+
+* Q1 → C (str)
+* Q2 → B (int)
+* Q3 → B (1020)
+
+---
+
+## Next Lesson 🚀
+
+**Lesson 4: Conditional Statements (`if`, `elif`, `else`)**
+
+You'll learn:
+
+* Decision making
+* Comparing values
+* Nested conditions
+* Login validation
+* Grade calculator
+* Real-world business rules
+* Interview questions on conditions
+
+This is where Python programs start becoming intelligent.
