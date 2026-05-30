@@ -1,0 +1,639 @@
+# Lesson 5: Loops (`for` and `while`)
+
+## 🎯 Learning Objectives
+
+By the end of this lesson, you will be able to:
+
+* Understand why loops are needed
+* Use `for` loops
+* Use `while` loops
+* Work with `range()`
+* Use `break` and `continue`
+* Build practical automation programs
+* Avoid common looping mistakes
+
+---
+
+# Why Do We Need Loops?
+
+Imagine printing numbers 1 to 10.
+
+Without loops:
+
+```python
+print(1)
+print(2)
+print(3)
+print(4)
+print(5)
+print(6)
+print(7)
+print(8)
+print(9)
+print(10)
+```
+
+This is repetitive.
+
+Using a loop:
+
+```python
+for i in range(1, 11):
+    print(i)
+```
+
+Much cleaner and scalable.
+
+---
+
+# What is a Loop?
+
+A loop repeatedly executes a block of code until a condition is met.
+
+Two main types:
+
+1. `for` loop
+2. `while` loop
+
+---
+
+# FOR Loop
+
+Used when you know how many times to repeat.
+
+Syntax:
+
+```python
+for variable in sequence:
+    # code block
+```
+
+Example:
+
+```python
+for i in range(5):
+    print(i)
+```
+
+Output:
+
+```text
+0
+1
+2
+3
+4
+```
+
+---
+
+# Understanding range()
+
+`range()` generates a sequence of numbers.
+
+### range(5)
+
+```python
+for i in range(5):
+    print(i)
+```
+
+Output:
+
+```text
+0
+1
+2
+3
+4
+```
+
+---
+
+### range(start, stop)
+
+```python
+for i in range(1, 6):
+    print(i)
+```
+
+Output:
+
+```text
+1
+2
+3
+4
+5
+```
+
+---
+
+### range(start, stop, step)
+
+```python
+for i in range(0, 11, 2):
+    print(i)
+```
+
+Output:
+
+```text
+0
+2
+4
+6
+8
+10
+```
+
+---
+
+# Printing Names
+
+```python
+names = ["Ravi", "Reddy", "Suresh"]
+
+for name in names:
+    print(name)
+```
+
+Output:
+
+```text
+Ravi
+Reddy
+Suresh
+```
+
+---
+
+# Loop Through a String
+
+```python
+word = "Python"
+
+for letter in word:
+    print(letter)
+```
+
+Output:
+
+```text
+P
+y
+t
+h
+o
+n
+```
+
+---
+
+# Multiplication Table
+
+```python
+number = 5
+
+for i in range(1, 11):
+    print(f"{number} x {i} = {number * i}")
+```
+
+Output:
+
+```text
+5 x 1 = 5
+5 x 2 = 10
+...
+5 x 10 = 50
+```
+
+---
+
+# WHILE Loop
+
+Used when the number of repetitions is unknown.
+
+Syntax:
+
+```python
+while condition:
+    # code block
+```
+
+Example:
+
+```python
+count = 1
+
+while count <= 5:
+    print(count)
+    count += 1
+```
+
+Output:
+
+```text
+1
+2
+3
+4
+5
+```
+
+---
+
+# Infinite Loop Warning
+
+❌ Dangerous:
+
+```python
+count = 1
+
+while count <= 5:
+    print(count)
+```
+
+Why?
+
+Because `count` never changes.
+
+The loop never ends.
+
+Always update the condition variable.
+
+---
+
+# User-Controlled Loop
+
+```python
+password = ""
+
+while password != "python123":
+    password = input("Enter Password: ")
+
+print("Access Granted")
+```
+
+The loop continues until the correct password is entered.
+
+---
+
+# Break Statement
+
+`break` immediately exits the loop.
+
+```python
+for i in range(1, 11):
+
+    if i == 5:
+        break
+
+    print(i)
+```
+
+Output:
+
+```text
+1
+2
+3
+4
+```
+
+---
+
+# Continue Statement
+
+`continue` skips the current iteration.
+
+```python
+for i in range(1, 6):
+
+    if i == 3:
+        continue
+
+    print(i)
+```
+
+Output:
+
+```text
+1
+2
+4
+5
+```
+
+---
+
+# Real-World Example 1: Sum of Numbers
+
+```python
+total = 0
+
+for i in range(1, 6):
+    total += i
+
+print(total)
+```
+
+Output:
+
+```text
+15
+```
+
+Calculation:
+
+```text
+1 + 2 + 3 + 4 + 5
+```
+
+---
+
+# Real-World Example 2: Attendance Count
+
+```python
+students = ["Ravi", "Reddy", "Kiran", "Anil"]
+
+for student in students:
+    print(f"Present: {student}")
+```
+
+---
+
+# Real-World Example 3: Experience Review
+
+```python
+experience_years = [2, 5, 8, 12]
+
+for years in experience_years:
+
+    if years >= 10:
+        print("Senior Engineer")
+    else:
+        print("Regular Engineer")
+```
+
+---
+
+# Nested Loops
+
+A loop inside another loop.
+
+```python
+for row in range(1, 4):
+
+    for col in range(1, 4):
+        print("*", end=" ")
+
+    print()
+```
+
+Output:
+
+```text
+* * *
+* * *
+* * *
+```
+
+---
+
+# Pattern Example
+
+```python
+for i in range(1, 6):
+    print("*" * i)
+```
+
+Output:
+
+```text
+*
+**
+***
+****
+*****
+```
+
+---
+
+# Exercise 1
+
+Print numbers from:
+
+```text
+1 to 20
+```
+
+using a `for` loop.
+
+---
+
+# Exercise 2
+
+Print even numbers between:
+
+```text
+1 and 50
+```
+
+---
+
+# Exercise 3
+
+Print a multiplication table for any number entered by the user.
+
+Example:
+
+```text
+Enter Number: 7
+```
+
+Output:
+
+```text
+7 x 1 = 7
+7 x 2 = 14
+...
+7 x 10 = 70
+```
+
+---
+
+# Exercise 4
+
+Using a `while` loop:
+
+Print numbers from:
+
+```text
+10 to 1
+```
+
+---
+
+# Exercise 5
+
+Find the sum of numbers:
+
+```text
+1 to 100
+```
+
+Expected Output:
+
+```text
+5050
+```
+
+---
+
+# Mini Project: ATM PIN Validation
+
+```python
+correct_pin = "1234"
+
+while True:
+
+    pin = input("Enter PIN: ")
+
+    if pin == correct_pin:
+        print("Access Granted")
+        break
+
+    print("Invalid PIN")
+```
+
+---
+
+# Quiz
+
+### Q1
+
+Output?
+
+```python
+for i in range(3):
+    print(i)
+```
+
+A)
+
+```text
+1 2 3
+```
+
+B)
+
+```text
+0 1 2
+```
+
+C)
+
+```text
+0 1 2 3
+```
+
+D) Error
+
+---
+
+### Q2
+
+Which loop is best when the number of iterations is known?
+
+A. while
+
+B. for
+
+C. if
+
+D. elif
+
+---
+
+### Q3
+
+What does `break` do?
+
+A. Skips iteration
+
+B. Stops loop
+
+C. Restarts loop
+
+D. Creates loop
+
+---
+
+### Q4
+
+What does `continue` do?
+
+A. Stops loop
+
+B. Exits program
+
+C. Skips current iteration
+
+D. Creates loop
+
+---
+
+# Assignment
+
+Create:
+
+```text
+employee_bonus_report.py
+```
+
+Requirements:
+
+1. Ask how many employees.
+2. Use a loop to collect:
+
+   * Employee Name
+   * Salary
+3. Calculate:
+
+   * Bonus = 10% of salary
+4. Display:
+
+```text
+Employee: Reddy
+Salary: 100000
+Bonus: 10000
+```
+
+for each employee.
+
+---
+
+# Answers
+
+* Q1 → B
+* Q2 → B
+* Q3 → B
+* Q4 → C
+
+---
+
+## Next Lesson 🚀
+
+**Lesson 6: Functions**
+
+You will learn:
+
+* Defining functions
+* Parameters
+* Return values
+* Default arguments
+* Reusable code
+* Real-world business examples
+
+Functions are where Python starts becoming modular and professional. This is a critical topic for interviews and production code. 🐍💼
