@@ -1,0 +1,542 @@
+# Lesson 4: Conditional Statements (`if`, `elif`, `else`)
+
+## 🎯 Learning Objectives
+
+By the end of this lesson, you will be able to:
+
+* Make decisions in Python programs
+* Use `if`, `elif`, and `else`
+* Write nested conditions
+* Build real-world validation programs
+* Create grade calculators and login checks
+
+---
+
+# Why Do We Need Conditions?
+
+Programs often need to make decisions.
+
+Examples:
+
+* Is the user eligible for a job?
+* Is the password correct?
+* Did the student pass?
+* Is the customer eligible for a discount?
+
+Conditional statements allow programs to choose different actions.
+
+---
+
+# The `if` Statement
+
+Syntax:
+
+```python
+if condition:
+    # code to execute
+```
+
+Example:
+
+```python
+age = 20
+
+if age >= 18:
+    print("Eligible to vote")
+```
+
+Output:
+
+```text
+Eligible to vote
+```
+
+---
+
+# Understanding Indentation
+
+Python uses indentation (spaces) to define blocks.
+
+✅ Correct:
+
+```python
+age = 20
+
+if age >= 18:
+    print("Eligible")
+```
+
+❌ Incorrect:
+
+```python
+age = 20
+
+if age >= 18:
+print("Eligible")
+```
+
+This causes an error.
+
+---
+
+# `if...else`
+
+Used when there are two possible outcomes.
+
+```python
+age = 15
+
+if age >= 18:
+    print("Adult")
+else:
+    print("Minor")
+```
+
+Output:
+
+```text
+Minor
+```
+
+---
+
+# Flow Diagram
+
+```text
+Condition True  --> IF Block
+Condition False --> ELSE Block
+```
+
+---
+
+# Example: Pass or Fail
+
+```python
+marks = 45
+
+if marks >= 35:
+    print("Pass")
+else:
+    print("Fail")
+```
+
+Output:
+
+```text
+Pass
+```
+
+---
+
+# The `elif` Statement
+
+Used when there are multiple conditions.
+
+Syntax:
+
+```python
+if condition1:
+    ...
+elif condition2:
+    ...
+elif condition3:
+    ...
+else:
+    ...
+```
+
+---
+
+# Example: Grade Calculator
+
+```python
+marks = 85
+
+if marks >= 90:
+    print("Grade A+")
+elif marks >= 75:
+    print("Grade A")
+elif marks >= 60:
+    print("Grade B")
+elif marks >= 35:
+    print("Grade C")
+else:
+    print("Fail")
+```
+
+Output:
+
+```text
+Grade A
+```
+
+---
+
+# Multiple Conditions with AND
+
+```python
+age = 30
+experience = 8
+
+if age >= 25 and experience >= 5:
+    print("Eligible")
+else:
+    print("Not Eligible")
+```
+
+Output:
+
+```text
+Eligible
+```
+
+---
+
+# Multiple Conditions with OR
+
+```python
+role = "Manager"
+
+if role == "Admin" or role == "Manager":
+    print("Access Granted")
+else:
+    print("Access Denied")
+```
+
+Output:
+
+```text
+Access Granted
+```
+
+---
+
+# Nested IF
+
+An `if` inside another `if`.
+
+```python
+age = 30
+experience = 6
+
+if age >= 25:
+
+    if experience >= 5:
+        print("Eligible")
+    else:
+        print("Experience Not Sufficient")
+
+else:
+    print("Age Not Eligible")
+```
+
+Output:
+
+```text
+Eligible
+```
+
+---
+
+# Mini Project 1: Login Validation
+
+```python
+username = input("Username: ")
+password = input("Password: ")
+
+if username == "admin" and password == "admin123":
+    print("Login Successful")
+else:
+    print("Invalid Credentials")
+```
+
+---
+
+# Mini Project 2: Even or Odd
+
+```python
+number = int(input("Enter Number: "))
+
+if number % 2 == 0:
+    print("Even Number")
+else:
+    print("Odd Number")
+```
+
+---
+
+# Mini Project 3: Salary Bonus Eligibility
+
+```python
+salary = float(input("Salary: "))
+
+if salary < 50000:
+    bonus = salary * 0.10
+else:
+    bonus = salary * 0.05
+
+print(f"Bonus: {bonus}")
+```
+
+---
+
+# Mini Project 4: Senior Developer Eligibility
+
+```python
+experience = int(input("Experience: "))
+
+if experience >= 10:
+    print("Senior Developer")
+elif experience >= 5:
+    print("Mid-Level Developer")
+else:
+    print("Junior Developer")
+```
+
+---
+
+# Real-World Example: Loan Eligibility
+
+```python
+salary = float(input("Monthly Salary: "))
+experience = int(input("Years of Experience: "))
+
+if salary >= 50000 and experience >= 3:
+    print("Loan Approved")
+else:
+    print("Loan Rejected")
+```
+
+---
+
+# Common Mistakes
+
+## Mistake 1
+
+Using `=` instead of `==`
+
+❌ Wrong
+
+```python
+if age = 18:
+    print("Eligible")
+```
+
+✅ Correct
+
+```python
+if age == 18:
+    print("Eligible")
+```
+
+---
+
+## Mistake 2
+
+Wrong Indentation
+
+❌
+
+```python
+if age >= 18:
+print("Eligible")
+```
+
+✅
+
+```python
+if age >= 18:
+    print("Eligible")
+```
+
+---
+
+# Exercise 1
+
+Accept age from user.
+
+Display:
+
+```text
+Adult
+```
+
+if age is 18 or above.
+
+Otherwise:
+
+```text
+Minor
+```
+
+---
+
+# Exercise 2
+
+Accept marks.
+
+Display grade:
+
+| Marks    | Grade |
+| -------- | ----- |
+| 90+      | A+    |
+| 75-89    | A     |
+| 60-74    | B     |
+| 35-59    | C     |
+| Below 35 | Fail  |
+
+---
+
+# Exercise 3
+
+Accept salary.
+
+If salary is greater than 100000:
+
+```text
+High Income
+```
+
+Otherwise:
+
+```text
+Regular Income
+```
+
+---
+
+# Exercise 4
+
+Accept username and password.
+
+Check:
+
+```python
+username == "reddy"
+password == "python123"
+```
+
+Display:
+
+```text
+Login Successful
+```
+
+or
+
+```text
+Invalid Login
+```
+
+---
+
+# Quiz
+
+### Q1
+
+Output?
+
+```python
+age = 20
+
+if age >= 18:
+    print("Adult")
+```
+
+A. Adult
+
+B. Minor
+
+C. Error
+
+D. Nothing
+
+---
+
+### Q2
+
+Output?
+
+```python
+marks = 30
+
+if marks >= 35:
+    print("Pass")
+else:
+    print("Fail")
+```
+
+A. Pass
+
+B. Fail
+
+C. Error
+
+D. None
+
+---
+
+### Q3
+
+Which operator checks equality?
+
+A. =
+
+B. ==
+
+C. >=
+
+D. !=
+
+---
+
+# Assignment
+
+Create:
+
+```text
+student_result.py
+```
+
+Requirements:
+
+1. Accept Student Name
+2. Accept Marks
+3. Determine Grade
+4. Display Result
+
+Example:
+
+```text
+Student Name : Ravi
+Marks        : 82
+Grade        : A
+Result       : Pass
+```
+
+---
+
+# Answers
+
+* Q1 → A (Adult)
+* Q2 → B (Fail)
+* Q3 → B (`==`)
+
+---
+
+## Next Lesson 🚀
+
+**Lesson 5: Loops (`for` and `while`)**
+
+You will learn:
+
+* Repeating tasks
+* `for` loops
+* `while` loops
+* `range()`
+* Break and Continue
+* Multiplication tables
+* Number patterns
+* Real-world automation examples
+
+Loops are one of the most important concepts in programming because they eliminate repetitive code and enable automation. 🔄🐍
