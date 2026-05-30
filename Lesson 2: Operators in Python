@@ -1,0 +1,621 @@
+# Lesson 2: Operators in Python
+
+## 🎯 Learning Objectives
+
+By the end of this lesson, you will be able to:
+
+* Use arithmetic operators
+* Compare values using comparison operators
+* Apply logical operators
+* Use assignment operators
+* Perform real-world calculations
+* Build simple business and engineering examples
+
+---
+
+# What is an Operator?
+
+An operator performs an operation on one or more values.
+
+Example:
+
+```python
+a = 10
+b = 5
+
+print(a + b)
+```
+
+Output:
+
+```text
+15
+```
+
+Here, `+` is an operator.
+
+---
+
+# Arithmetic Operators
+
+| Operator | Meaning             | Example |
+| -------- | ------------------- | ------- |
+| +        | Addition            | 10 + 5  |
+| -        | Subtraction         | 10 - 5  |
+| *        | Multiplication      | 10 * 5  |
+| /        | Division            | 10 / 5  |
+| %        | Modulus (Remainder) | 10 % 3  |
+| //       | Floor Division      | 10 // 3 |
+| **       | Power               | 2 ** 3  |
+
+---
+
+## Addition
+
+```python
+a = 10
+b = 20
+
+print(a + b)
+```
+
+Output:
+
+```text
+30
+```
+
+---
+
+## Subtraction
+
+```python
+salary = 50000
+expenses = 30000
+
+balance = salary - expenses
+
+print(balance)
+```
+
+Output:
+
+```text
+20000
+```
+
+---
+
+## Multiplication
+
+```python
+price = 100
+quantity = 5
+
+total = price * quantity
+
+print(total)
+```
+
+Output:
+
+```text
+500
+```
+
+---
+
+## Division
+
+```python
+total_marks = 450
+subjects = 5
+
+average = total_marks / subjects
+
+print(average)
+```
+
+Output:
+
+```text
+90.0
+```
+
+---
+
+## Modulus (%)
+
+Returns the remainder.
+
+```python
+print(10 % 3)
+```
+
+Output:
+
+```text
+1
+```
+
+Useful for checking even/odd numbers:
+
+```python
+number = 12
+
+print(number % 2)
+```
+
+Output:
+
+```text
+0
+```
+
+---
+
+## Floor Division (//)
+
+Returns the whole number part.
+
+```python
+print(10 // 3)
+```
+
+Output:
+
+```text
+3
+```
+
+---
+
+## Power (**)
+
+```python
+print(2 ** 3)
+```
+
+Output:
+
+```text
+8
+```
+
+Meaning:
+
+```text
+2 × 2 × 2
+```
+
+---
+
+# Comparison Operators
+
+Used to compare values.
+
+| Operator | Meaning               |
+| -------- | --------------------- |
+| ==       | Equal                 |
+| !=       | Not Equal             |
+| >        | Greater Than          |
+| <        | Less Than             |
+| >=       | Greater Than or Equal |
+| <=       | Less Than or Equal    |
+
+---
+
+## Equal To
+
+```python
+age = 35
+
+print(age == 35)
+```
+
+Output:
+
+```text
+True
+```
+
+---
+
+## Not Equal To
+
+```python
+age = 35
+
+print(age != 30)
+```
+
+Output:
+
+```text
+True
+```
+
+---
+
+## Greater Than
+
+```python
+salary = 80000
+
+print(salary > 50000)
+```
+
+Output:
+
+```text
+True
+```
+
+---
+
+## Less Than
+
+```python
+marks = 60
+
+print(marks < 75)
+```
+
+Output:
+
+```text
+True
+```
+
+---
+
+# Logical Operators
+
+Used to combine conditions.
+
+| Operator | Meaning                        |
+| -------- | ------------------------------ |
+| and      | Both conditions must be True   |
+| or       | Any one condition must be True |
+| not      | Reverses result                |
+
+---
+
+## AND Operator
+
+```python
+age = 35
+experience = 11
+
+print(age > 30 and experience > 10)
+```
+
+Output:
+
+```text
+True
+```
+
+---
+
+## OR Operator
+
+```python
+salary = 40000
+
+print(salary > 50000 or salary == 40000)
+```
+
+Output:
+
+```text
+True
+```
+
+---
+
+## NOT Operator
+
+```python
+is_student = False
+
+print(not is_student)
+```
+
+Output:
+
+```text
+True
+```
+
+---
+
+# Assignment Operators
+
+| Operator | Example |
+| -------- | ------- |
+| =        | x = 10  |
+| +=       | x += 5  |
+| -=       | x -= 5  |
+| *=       | x *= 5  |
+| /=       | x /= 5  |
+
+---
+
+## += Example
+
+```python
+score = 100
+
+score += 50
+
+print(score)
+```
+
+Output:
+
+```text
+150
+```
+
+Equivalent to:
+
+```python
+score = score + 50
+```
+
+---
+
+## -= Example
+
+```python
+balance = 1000
+
+balance -= 200
+
+print(balance)
+```
+
+Output:
+
+```text
+800
+```
+
+---
+
+# Real-World Example 1: Employee Bonus
+
+```python
+salary = 60000
+bonus_percent = 10
+
+bonus = salary * bonus_percent / 100
+
+print("Bonus:", bonus)
+```
+
+Output:
+
+```text
+Bonus: 6000.0
+```
+
+---
+
+# Real-World Example 2: Student Result
+
+```python
+maths = 90
+science = 80
+english = 85
+
+total = maths + science + english
+average = total / 3
+
+print("Total:", total)
+print("Average:", average)
+```
+
+Output:
+
+```text
+Total: 255
+Average: 85.0
+```
+
+---
+
+# Real-World Example 3: Senior Developer Experience Check
+
+```python
+experience = 11
+
+eligible = experience >= 10
+
+print(eligible)
+```
+
+Output:
+
+```text
+True
+```
+
+---
+
+# Exercise 1
+
+Calculate the area of a rectangle.
+
+Formula:
+
+Area = Length \times Width
+
+```python
+length = 10
+width = 5
+```
+
+Expected Output:
+
+```text
+50
+```
+
+---
+
+# Exercise 2
+
+Check whether a number is even or odd.
+
+```python
+number = 25
+```
+
+Hint:
+
+```python
+number % 2
+```
+
+---
+
+# Exercise 3
+
+Calculate monthly savings.
+
+```python
+salary = 80000
+expenses = 45000
+```
+
+Find:
+
+```text
+Savings
+```
+
+---
+
+# Exercise 4
+
+Check Job Eligibility.
+
+Conditions:
+
+```text
+Experience >= 5
+Age >= 25
+```
+
+Use:
+
+```python
+and
+```
+
+---
+
+# Quiz
+
+### Q1
+
+Output?
+
+```python
+print(20 % 6)
+```
+
+A) 2
+
+B) 3
+
+C) 4
+
+D) 5
+
+---
+
+### Q2
+
+Output?
+
+```python
+print(5 > 2 and 10 > 20)
+```
+
+A) True
+
+B) False
+
+---
+
+### Q3
+
+Output?
+
+```python
+x = 10
+x += 5
+
+print(x)
+```
+
+A) 10
+
+B) 15
+
+C) 5
+
+D) Error
+
+---
+
+# Assignment
+
+Create a file:
+
+```text
+employee_salary_calculator.py
+```
+
+Requirements:
+
+1. Store employee name
+2. Store salary
+3. Store bonus percentage
+4. Calculate bonus
+5. Calculate total salary
+6. Print all details
+
+Example:
+
+```text
+Employee : Reddy
+Salary   : 50000
+Bonus    : 5000
+Total    : 55000
+```
+
+---
+
+## Answers
+
+Q1 → A (2)
+
+Q2 → B (False)
+
+Q3 → B (15)
+
+---
+
+## Next Lesson
+
+**Lesson 3: Input and Output in Python**
+
+* `input()`
+* `print()`
+* Type conversion (`int()`, `float()`, `str()`)
+* Interactive programs
+* Building a calculator from user input 🚀
