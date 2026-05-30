@@ -1,0 +1,390 @@
+# Lesson 1: Python Variables and Data Types
+
+## 🎯 Learning Objectives
+
+By the end of this lesson, you will be able to:
+
+* Understand what variables are
+* Create and use variables
+* Identify common Python data types
+* Print values to the console
+* Use the `type()` function
+* Complete simple exercises
+
+---
+
+# What is a Variable?
+
+A variable is a named storage location used to hold data.
+
+Think of it as a labeled box.
+
+```python
+name = "Reddy"
+```
+
+Here:
+
+* `name` → Variable name
+* `"Reddy"` → Value stored in the variable
+
+---
+
+# Creating Variables
+
+Python automatically determines the data type.
+
+```python
+name = "Reddy"
+age = 35
+salary = 50000.50
+```
+
+No need to specify:
+
+```csharp
+// C#
+string name = "Reddy";
+int age = 35;
+```
+
+Python simply uses:
+
+```python
+name = "Reddy"
+age = 35
+```
+
+---
+
+# Common Data Types
+
+| Data Type | Example          |
+| --------- | ---------------- |
+| str       | "Reddy"          |
+| int       | 35               |
+| float     | 50000.50         |
+| bool      | True             |
+| list      | [1,2,3]          |
+| tuple     | (1,2,3)          |
+| dict      | {"name":"Reddy"} |
+| set       | {1,2,3}          |
+
+---
+
+# String
+
+Text values.
+
+```python
+name = "Reddy"
+city = "Hyderabad"
+
+print(name)
+print(city)
+```
+
+Output:
+
+```text
+Reddy
+Hyderabad
+```
+
+---
+
+# Integer
+
+Whole numbers.
+
+```python
+age = 35
+experience = 11
+
+print(age)
+print(experience)
+```
+
+Output:
+
+```text
+35
+11
+```
+
+---
+
+# Float
+
+Decimal values.
+
+```python
+salary = 50000.75
+rating = 4.8
+
+print(salary)
+print(rating)
+```
+
+Output:
+
+```text
+50000.75
+4.8
+```
+
+---
+
+# Boolean
+
+True or False values.
+
+```python
+is_employed = True
+is_student = False
+
+print(is_employed)
+print(is_student)
+```
+
+Output:
+
+```text
+True
+False
+```
+
+---
+
+# Using type()
+
+Check the data type of a variable.
+
+```python
+name = "Reddy"
+age = 35
+
+print(type(name))
+print(type(age))
+```
+
+Output:
+
+```text
+<class 'str'>
+<class 'int'>
+```
+
+---
+
+# Multiple Variables
+
+```python
+name = "Reddy"
+age = 35
+city = "Hyderabad"
+
+print(name, age, city)
+```
+
+Output:
+
+```text
+Reddy 35 Hyderabad
+```
+
+---
+
+# Variable Naming Rules
+
+✅ Valid
+
+```python
+name = "Reddy"
+employee_id = 101
+salary2025 = 50000
+```
+
+❌ Invalid
+
+```python
+2name = "Reddy"
+first-name = "Reddy"
+class = "Python"
+```
+
+Rules:
+
+* Cannot start with a number
+* No special characters except `_`
+* Cannot use Python keywords
+
+---
+
+# Mini Project
+
+Create a professional profile.
+
+```python
+name = "B L Narsimha Reddy"
+role = "Senior Software Engineer"
+experience = 11
+city = "Hyderabad"
+is_available = True
+
+print("Name:", name)
+print("Role:", role)
+print("Experience:", experience)
+print("City:", city)
+print("Available:", is_available)
+```
+
+---
+
+# Exercise 1
+
+Create variables for:
+
+```text
+Name
+Age
+City
+Country
+Salary
+```
+
+Print all values.
+
+---
+
+# Exercise 2
+
+Create variables:
+
+```text
+Product Name
+Price
+Quantity
+```
+
+Calculate:
+
+Total = Price × Quantity
+
+Print the result.
+
+Expected:
+
+```python
+price = 100
+quantity = 5
+
+total = price * quantity
+
+print(total)
+```
+
+Output:
+
+```text
+500
+```
+
+---
+
+# Exercise 3
+
+Create variables for:
+
+```text
+Student Name
+Marks in Math
+Marks in Science
+Marks in English
+```
+
+Calculate:
+
+```text
+Total Marks
+Average Marks
+```
+
+---
+
+# Knowledge Check Quiz
+
+### Q1
+
+Which is a valid variable?
+
+```python
+A) 1name
+B) first-name
+C) employee_name
+D) class
+```
+
+### Q2
+
+What is the type of:
+
+```python
+salary = 50000.50
+```
+
+A) int
+
+B) float
+
+C) str
+
+D) bool
+
+### Q3
+
+What is the output?
+
+```python
+age = 35
+print(type(age))
+```
+
+---
+
+# Assignment
+
+Create a file:
+
+```text
+student_profile.py
+```
+
+Store:
+
+* Name
+* Age
+* Course
+* College
+* Percentage
+
+Print all details neatly.
+
+---
+
+## Next Lesson
+
+**Lesson 2: Operators in Python**
+
+* Arithmetic Operators
+* Comparison Operators
+* Logical Operators
+* Assignment Operators
+* Real-world calculations
+* Practice exercises and mini-projects
+
+### Answers to Quiz
+
+1. C (`employee_name`)
+2. B (`float`)
+3. `<class 'int'>` 🚀
